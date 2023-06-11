@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const baseURL = "http://127.0.0.1:8000/api/v1/facial-expression";
-// const baseURL = "https://dl-web-api-production.up.railway.app/api/v1/facial-expression";
+const baseURL = "https://dl-web-api-production.up.railway.app/api/v1/facial-expression";
 // const baseURL = "https://dl-web-api-flask-production.up.railway.app/api/v1/facial-expression";
 
 const settings = {
