@@ -66,6 +66,7 @@ export const VideoFrame = () => {
         const image = (await canvas).toDataURL("image/jpeg", 1.0)
         // console.log(image)
         await predictBlob(image).then(res => {
+            console.log(res.data);
             handleState("label", res.data.label);
             handleState("score", res.data.score)
             handleState("val", res.data.val);
