@@ -1,0 +1,227 @@
+header {
+  padding: 0rem 3rem;
+}
+
+main {
+  padding: 0rem 3rem 1rem 3rem;
+}
+
+video,
+canvas {
+  height: 100%;
+  min-width: 100vh;
+  border-radius: 5px;
+  border: none;
+  /*border: 2px solid rgba(245, 245, 245, 0.248);
+  */
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.video {
+  display: flex;
+  justify-content: left;
+  height: 32.5rem;
+  width: 100%;
+}
+
+.overlay {
+  /*position: absolute;
+  */padding: 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: rgba(33, 32, 32, 0);
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: 0.25s showup;
+  -webkit-animation: 0.25s showup;
+}
+
+.emoji {
+  background-color: transparent;
+  font-size: 10rem;
+  /* margin: auto; */
+}
+
+@keyframes showup {
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  from {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+  }
+}
+
+.loader {
+  min-height: 5px;
+  min-width: 5px;
+  border: 1px solid rgb(30, 29, 29);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: transparent;
+  border-top: 1px solid rgb(233, 226, 226);
+  padding: 0.5rem;
+  animation: spin 0.25s infinite linear;
+  -webkit-animation: spin 0.25s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+.video-frame {
+  border: 2px solid rgba(245, 245, 245, 0.248);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 0.5rem;
+  min-height: max-content;
+  min-width: 10rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  grid-gap: 0.5rem;
+}
+
+/* *{
+  border: 1px solid rgba(245, 245, 245, 0.248);
+  
+} */
+
+.controls button {
+  width: 100%;
+  border: none;
+  background: rgba(22, 21, 21, 0.627);
+  padding: 0rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+button p {
+  background-color: transparent;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.controls button:hover {
+  background: rgb(25, 24, 24);
+}
+
+.space {
+  padding: 0.25rem;
+}
+
+.icon {
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 740px) {
+  header {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  video {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .video-frame {
+    border: none;
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .loader {
+    min-height: 2.5px;
+    min-width: 2.5px;
+  }
+
+  .video {
+    height: max-content;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: max-content;
+    width: max-content;
+    padding: 0.5rem;
+    bottom: 0;
+    margin: .25rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+
+  .emoji {
+    font-size: 1rem;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .controls button p {
+    margin-right: 0.25rem;
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 25px;
+  }
+}
